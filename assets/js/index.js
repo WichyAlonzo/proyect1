@@ -32,10 +32,7 @@ function actualizarPedido(data) {
         nuevoPedido = document.createElement('div');
         nuevoPedido.id = pedidoId;
         nuevoPedido.classList.add('pedido-new');
-        nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded';
-        nuevoPedido.style.width = '100%';
-        nuevoPedido.style.border = 'solid 1px #e9e9e9';
-        nuevoPedido.style.background = 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)';
+        nuevoPedido.className = 'shadow-sm p-2 mb-2 rounded  new_pedido_card';
         nuevoPedido.innerHTML = `
                     <div onclick="abrirOffcanvas(${data.id})" class="orden-id" data-id="${data.idrandom}">
                     ID: ${data.idrandom}
@@ -47,15 +44,12 @@ function actualizarPedido(data) {
         if (data.repa === '') {
             nuevoPedido = document.createElement('div');
             nuevoPedido.id = pedidoId;
-            nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded';
-            nuevoPedido.style.width = '100%';
-            nuevoPedido.style.border = 'solid 1px #e9e9e9 !important';
-            nuevoPedido.style.backgroundColor = '#ffffff47';
+            nuevoPedido.className = 'shadow-sm p-2 mb-2 rounded preparado_card';
             nuevoPedido.innerHTML = `
                       <div onclick="preparandoOff(${data.id})" class="orden-id"  data-id="${data.idrandom}">ID: ${data.idrandom}
                       <div class="d-none px-1 buscar-rt text-ligth">${data.status}</div>
                       <div class="d-flex align-items-center">
-                          <div class="spinner-grow text-primary" role="status" style="width: 15px!important;height: 15px!important;">
+                          <div class="spinner-grow text-primary" role="status" style="width: 7px!important;height: 7px!important;">
                               <span class="visually-hidden">Loading...</span>
                           </div>
                           <div class="my-1 px-1 buscar-rt"><span>Buscando Repa</span></div>
@@ -68,10 +62,7 @@ function actualizarPedido(data) {
         } else {
             nuevoPedido = document.createElement('div');
             nuevoPedido.id = pedidoId;
-            nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded';
-            nuevoPedido.style.width = '100%';
-            nuevoPedido.style.border = 'solid 1px #e9e9e9 !important';
-            nuevoPedido.style.backgroundColor = '#ffffff47';
+            nuevoPedido.className = 'shadow-sm p-2 mb-2 rounded preparado_card';
             nuevoPedido.innerHTML = `
                     <div onclick="preparandoOff(${data.id})" class="orden-id"  data-id="${data.idrandom}">ID: ${data.idrandom}
                     <div class="d-none px-1 buscar-rt text-ligth">${data.status}</div>
@@ -87,17 +78,14 @@ function actualizarPedido(data) {
         nuevoPedido = document.createElement('div');
         nuevoPedido.id = pedidoId;
         nuevoPedido.id = pedidoId;
-        nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded';
-        nuevoPedido.style.width = '100%';
-        nuevoPedido.style.border = 'solid 1px #e9e9e9 !important';
-        nuevoPedido.style.backgroundColor = '#ffffff47';
+        nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded terminado_card';
         nuevoPedido.textContent = `ID: ${data.id}, Cliente: ${data.cliente}, Status: ${data.status}`;
         if (data.repa === '') {
             nuevoPedido.innerHTML = `
                     <div onclick="terminadoOff(${data.id})" class="orden-id"  data-id="${data.idrandom}">ID: ${data.idrandom}
                     <div class="d-none px-1 buscar-rt text-ligth">${data.status}</div>
                     <div class="d-flex align-items-center">
-                        <div class="spinner-grow text-primary" role="status" style="width: 15px!important;height: 15px!important;">
+                        <div class="spinner-grow text-primary" role="status" style="width: 7px!important;height: 7px!important;">
                             <span class="visually-hidden">Loading...</span>
                         </div>
                         <div class="my-1 px-1 buscar-rt"><span>Buscando Repa</span></div>
@@ -112,10 +100,10 @@ function actualizarPedido(data) {
                         <div class="my-1 px-1 buscar-rt"><b>Repa:</b> ${data.repa}</div>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="spinner-grow text-danger" role="status" style="width: 15px!important;height: 15px!important;">
+                        <div class="spinner-grow text-danger" role="status" style="width: 7px!important;height: 7px!important;">
                             <span class="visually-hidden">Loading...</span>
                         </div>
-                        <div class="my-1 px-1 buscar-rt"><span>Esperando a ser recogido el pedido</span></div>
+                        <div class="my-0 px-1 buscar-rt"><span>Esperando a ser recogido el pedido</span></div>
                     </div>
                     </div>
                 `;

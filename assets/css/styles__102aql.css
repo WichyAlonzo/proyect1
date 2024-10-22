@@ -1,5 +1,9 @@
 /*  */
 
+:root {
+    --color--text: #2f2f2f;
+}
+
 body {
     background-color: #eeeeee!important;
 }
@@ -120,4 +124,127 @@ body {
     font-weight: 500;
     font-size: 13px;
     line-height: 1;
+}
+
+
+/* Menu */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 36px;
+    margin-right: 12px;
+}
+
+.aliados {
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+    margin: -4px !important;
+    padding: 0 !important;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.code-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20px;
+    align-items: flex-start;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.code-label {
+    font-size: 12px;
+    color: var(--color--text);
+}
+
+.code-number {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.code-expiration {
+    font-size: 12px;
+    color: var(--color--text);
+}
+
+.store-status {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.store-status:hover {
+    background-color: #e55a27;
+}
+
+.notification-icon {
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.text__men____ {
+    font-size: 9px;
+    color: grey;
+    font-weight: 700;
+}
+
+.new_pedido_card {
+    border: solid 1px #e9e9e9;
+    width: 100%;
+    font-size: 13px;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.preparado_card,
+.terminado_card {
+    font-size: 13px;
+    width: 100%;
+    border: solid 1px #e9e9e9 !important;
+    background-color: #f3f3f3;
+}
+
+.menu__action_bar:hover {
+    background-color: #f1f1f1;
+}
+
+.menu__action_bar {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2f2f2f;
 }
