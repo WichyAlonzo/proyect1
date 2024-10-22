@@ -6,45 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Órdenes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .offcanvas {
-      transition: transform 0.3s ease;
-    }
-
-    .offcanvas.hide {
-      transform: translateX(100%);
-      /* Mueve el modal fuera de la vista */
-    }
-
-    .orden-card {
-      background-color: #f8f9fa;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      height: 90vh;
-    }
-
-    .orden-id {
-      font-weight: bold;
-    }
-
-    .buscar-rt {
-      color: #666;
-    }
-
-    .orden-lista-btn {
-      background-color: #00c389;
-      color: white;
-    }
-
-    .orden-lista-btn:hover {
-      background-color: #00a574;
-    }
-
-    .offcanvas-custom {
-      width: 70vh;
-      /* Ajusta el ancho a 70vh */
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles__102aql.css?v=<?php echo time(); ?>">
 </head>
 
 <body style="background: #eeeeee;">

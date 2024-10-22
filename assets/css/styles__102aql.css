@@ -1,0 +1,35 @@
+.offcanvas {
+    transition: transform 0.3s ease!important;
+}
+
+.offcanvas.hide {
+    transform: translateX(100%)!important;
+}
+
+.orden-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 90vh;
+}
+
+.orden-id {
+    font-weight: bold;
+}
+
+.buscar-rt {
+    color: #666;
+}
+
+.orden-lista-btn {
+    background-color: #00c389;
+    color: white;
+}
+
+.orden-lista-btn:hover {
+    background-color: #00a574;
+}
+
+.offcanvas-custom {
+    width: 70vh;
+}
