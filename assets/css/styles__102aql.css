@@ -1,3 +1,9 @@
+/*  */
+
+body {
+    background-color: #eeeeee!important;
+}
+
 .offcanvas {
     transition: transform 0.3s ease!important;
 }
@@ -32,4 +38,86 @@
 
 .offcanvas-custom {
     width: 70vh;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.scroll-productos {
+    height: 62vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.space__client,
+.space__repa {
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    padding-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.address-client {
+    padding-top: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 5px;
+}
+
+.name-client {
+    padding-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.button_footer_info {
+    position: absolute;
+    bottom: 0px;
+    background: #f2f2f2;
+    width: 100%;
+    padding: 15px;
+}
+
+.total_footer_client {
+    position: absolute;
+    bottom: 66px;
+    background: #f2f2f2;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+
+.class__product {
+    padding: 15px 6px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.container__product {
+    border-radius: 5px;
+    background: #f9f9f9;
+    border: 1px solid #f4f4f4;
+}
+
+.dim__topp {
+    padding: 3px 6px 0px 6px;
+}
+
+.menssage__divs {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: #aeaeae
+}
+
+.font_line_text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1;
 }
