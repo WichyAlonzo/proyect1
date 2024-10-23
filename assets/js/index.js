@@ -287,13 +287,11 @@ function preparandoOff(clienteId) {
                     let containerRepa = $('.space__repa');
                     let containerSearch = $('.search__repa');
                     if (pedidoData.repa === '' || pedidoData.repa === null) {
-                        console.log('Sin repa');
                         containerRepa.addClass('d-none');
                         containerSearch.removeClass('d-none');
 
 
                     } else {
-                        console.log('Con repa');
                         containerRepa.removeClass('d-none');
                         containerSearch.addClass('d-none');
                         nombreRepa.text(pedidoData.repa);
@@ -315,7 +313,6 @@ function preparandoOff(clienteId) {
             btn_Preparada.on("click", function() {
                 const lastIdRandom = clickedIds[clickedIds.length - 1];
                 const status = 'terminado';
-                console.log(idRandom + '\n');
                 $.ajax({
                     url: 'accions/status.php',
                     type: 'POST',
@@ -324,7 +321,6 @@ function preparandoOff(clienteId) {
                         status: status
                     },
                     success: function(response) {
-                        console.log(response);
                         if (response === 'si') {
                             $('#offcanvasRightPrepa').removeClass('show');
                             $('.offcanvas-backdrop').remove();
@@ -374,7 +370,6 @@ function preparandoOff(clienteId) {
 function terminadoOff(clienteId) {
     buscarClientePorId(clienteId)
         .then(clienteData => {
-            console.log(clienteData);
             const offcanvasBody = document.querySelector('#offcanvasRightTerminado .offcanvas-body');
             const productos_nuevos = document.querySelector('.productos_terminado____');
             const ordenCliente = document.getElementById('offcanvasRightLabelTerminado');
@@ -389,7 +384,6 @@ function terminadoOff(clienteId) {
 
             eventSource.onmessage = function(event) {
                 const pedidoData = JSON.parse(event.data);
-                console.log(pedidoData);
                 if (pedidoData.error) {
                     console.error(pedidoData.error);
                 } else if (pedidoData.message) {
@@ -398,13 +392,11 @@ function terminadoOff(clienteId) {
                     let containerRepa = $('.space__repa');
                     let containerSearch = $('.search__repa');
                     if (pedidoData.repa === '' || pedidoData.repa === null) {
-                        console.log('Sin repa');
                         containerRepa.addClass('d-none');
                         containerSearch.removeClass('d-none');
 
 
                     } else {
-                        console.log('Con repa');
                         containerRepa.removeClass('d-none');
                         containerSearch.addClass('d-none');
                         nombreRepa.text(pedidoData.repa);
@@ -426,7 +418,6 @@ function terminadoOff(clienteId) {
             btn_Preparada.on("click", function() {
                 const lastIdRandom = clickedIds[clickedIds.length - 1];
                 const status = 'terminado';
-                console.log(idRandom + '\n');
                 $.ajax({
                     url: 'accions/status.php',
                     type: 'POST',
@@ -435,7 +426,6 @@ function terminadoOff(clienteId) {
                         status: status
                     },
                     success: function(response) {
-                        console.log(response);
                         if (response === 'si') {
                             $('#offcanvasRightPrepa').removeClass('show');
                             $('.offcanvas-backdrop').remove();
