@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">   
     <link rel="stylesheet" href="assets/css/styles__102aql.css?v=<?php echo time(); ?>">
 </head>
 
@@ -110,7 +110,6 @@
                 <div class="orden-card">
                     <div class="m-3">
                         <img src="https://wichyalonzo.com/delivery/business/cactuswings/alitas.png" class="img-fluid img_product_admin" alt="">
-
                         <label class="my-2 label_input">Nombre</label>
                         <div class="input-group flex-nowrap">
                             <input type="text" class="input__st form-control" placeholder="Nombre del producto" aria-label="Nombre del producto" aria-describedby="addon-wrapping">
