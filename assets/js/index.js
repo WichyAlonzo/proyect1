@@ -489,6 +489,37 @@ function buscarClientePorId(clienteId) {
         });
 }
 
+// function generarProductosHTML(productosJSON) {
+//     const productos = JSON.parse(productosJSON);
+//     let productosHTML = '';
+
+//     productos.forEach(producto => {
+//         productosHTML += `
+//             <div class="mb-3 container__product">
+//                 <div class="class__product">
+//                     <strong><b>${producto.nombre}</b></strong><br>
+//                 </div>
+//                 <div class="dim__topp">
+//                     <span><b>Salsas:</b> ${producto.salsas.join(', ') || 'Ninguna'}</span><br>
+//                 </div>
+//                 <div class="dim__topp">
+//                     <span><b>Extras:</b> ${producto.accompaning.join(', ') || 'Ninguno'}</span><br>
+//                 </div>
+//                 <div class="d-flex justify-content-between" style="padding: 8px 6px 18px 6px;">
+//                     <div>
+//                         <span><b>Total</b>:</span>
+//                     </div>
+//                     <div>
+//                         <span><b>$${producto.precio}</b></span>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//     });
+//     return productosHTML;
+
+// }
+
 function generarProductosHTML(productosJSON) {
     const productos = JSON.parse(productosJSON);
     let productosHTML = '';
@@ -499,12 +530,28 @@ function generarProductosHTML(productosJSON) {
                 <div class="class__product">
                     <strong><b>${producto.nombre}</b></strong><br>
                 </div>
-                <div class="dim__topp">
-                    <span><b>Salsas:</b> ${producto.salsas.join(', ') || 'Ninguna'}</span><br>
-                </div>
-                <div class="dim__topp">
-                    <span><b>Extras:</b> ${producto.accompaning.join(', ') || 'Ninguno'}</span><br>
-                </div>
+        `;
+
+        // // Iterar sobre los extras
+        for (const grupo in producto.extras) {
+            console.log(grupo);
+            const extrasGrupo = producto.extras[grupo]; // Acceder al grupo (por ejemplo, g1)
+            console.log(extrasGrupo);
+
+            extrasGrupo.forEach(item => {
+                productosHTML += `<div class="dim__topp"><strong>${item.nombre}</strong>:<br>`;
+
+                // Iterar sobre los productos dentro de cada grupo
+                item.productos.forEach(prod => {
+                    productosHTML += `<span>- ${prod.nombre} ($${prod.precio})</span><br>`;
+                });
+
+                productosHTML += `</div>`;
+            });
+        }
+
+
+        productosHTML += `
                 <div class="d-flex justify-content-between" style="padding: 8px 6px 18px 6px;">
                     <div>
                         <span><b>Total</b>:</span>
@@ -516,8 +563,8 @@ function generarProductosHTML(productosJSON) {
             </div>
         `;
     });
-    return productosHTML;
 
+    return productosHTML;
 }
 
 function orderFull(idPedido) {

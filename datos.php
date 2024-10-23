@@ -39,6 +39,6 @@ while (true) {
     }
 
     // Esperar 3 segundos antes de volver a consultar
-    sleep(3);
+    sleep(5);
 }
 ?>
