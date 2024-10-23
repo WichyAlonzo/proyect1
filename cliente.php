@@ -251,17 +251,20 @@
     </div>
     <div class="offcanvas-body" style="padding: 0px !important;">
       <div class="py3" style="height: 24px;">
-        
-      </div>
-      <div class="active__menu p-2 menu__action_bar">
-        <!-- Icono -->
-        <span class="mx-1">Pedidos</span>
-      </div>
-      <div class="p-2 menu__action_bar">
-        <!-- Icono -->
-        <span class="mx-1">Menú</span>
-      </div>
 
+      </div>
+      <a class="text-decoration-none" href="cliente">
+        <div class="active__menu p-2 menu__action_bar">
+          <!-- Icono -->
+          <span class="mx-1">Pedidos</span>
+        </div>
+      </a>
+      <a class="text-decoration-none" href="productos">
+        <div class="p-2 menu__action_bar">
+          <!-- Icono -->
+          <span class="mx-1">Menú</span>
+        </div>
+      </a>
     </div>
   </div>
 
