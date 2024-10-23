@@ -188,6 +188,7 @@ eventSource.onerror = (error) => {
     console.error('Error:', error);
 };
 
+let clickedIds = [];
 
 function abrirOffcanvas(clienteId) {
     buscarClientePorId(clienteId)
@@ -202,14 +203,17 @@ function abrirOffcanvas(clienteId) {
             const totalPedido = $('.total_order__');
             const subtotalPedido = $('.subtotal_order__');
 
+            const idRandom = clienteData.cliente.idrandom;
+            clickedIds.push(idRandom);
+
             btn_Nuevo.on("click", function() {
-                const idRandom = clienteData.cliente.idrandom;
+                const lastIdRandom = clickedIds[clickedIds.length - 1];
                 const status = 'preparado';
                 $.ajax({
                     url: 'accions/status.php',
                     type: 'POST',
                     data: {
-                        id: idRandom,
+                        id: lastIdRandom,
                         status: status
                     },
                     success: function(response) {
@@ -306,15 +310,17 @@ function preparandoOff(clienteId) {
             };
 
 
-
+            const idRandom = clienteData.cliente.idrandom;
+            clickedIds.push(idRandom);
             btn_Preparada.on("click", function() {
-                const idRandom = clienteData.cliente.idrandom;
+                const lastIdRandom = clickedIds[clickedIds.length - 1];
                 const status = 'terminado';
+                console.log(idRandom + '\n');
                 $.ajax({
                     url: 'accions/status.php',
                     type: 'POST',
                     data: {
-                        id: idRandom,
+                        id: lastIdRandom,
                         status: status
                     },
                     success: function(response) {
@@ -368,6 +374,7 @@ function preparandoOff(clienteId) {
 function terminadoOff(clienteId) {
     buscarClientePorId(clienteId)
         .then(clienteData => {
+            console.log(clienteData);
             const offcanvasBody = document.querySelector('#offcanvasRightTerminado .offcanvas-body');
             const productos_nuevos = document.querySelector('.productos_terminado____');
             const ordenCliente = document.getElementById('offcanvasRightLabelTerminado');
@@ -414,15 +421,17 @@ function terminadoOff(clienteId) {
             };
 
 
-
+            const idRandom = clienteData.cliente.idrandom;
+            clickedIds.push(idRandom);
             btn_Preparada.on("click", function() {
-                const idRandom = clienteData.cliente.idrandom;
+                const lastIdRandom = clickedIds[clickedIds.length - 1];
                 const status = 'terminado';
+                console.log(idRandom + '\n');
                 $.ajax({
                     url: 'accions/status.php',
                     type: 'POST',
                     data: {
-                        id: idRandom,
+                        id: lastIdRandom,
                         status: status
                     },
                     success: function(response) {
