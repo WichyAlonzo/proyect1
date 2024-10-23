@@ -253,18 +253,12 @@
       <div class="py3" style="height: 24px;">
         
       </div>
-      <div class="p-2 menu__action_bar">
+      <div class="active__menu p-2 menu__action_bar">
         <!-- Icono -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16" style="width: 24px;height: 24px;color: #51b972;">
-          <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-        </svg>
         <span class="mx-1">Pedidos</span>
       </div>
       <div class="p-2 menu__action_bar">
         <!-- Icono -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16" style="width: 24px;height: 24px;color: #51b972;">
-          <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-        </svg>
         <span class="mx-1">Menú</span>
       </div>
 
@@ -304,9 +298,7 @@
           <span class="fw-bold">Tienda abierta</span>
         </button>
         <ul class="dropdown-menu">
-          <li><button class="dropdown-item" type="button">Action</button></li>
-          <li><button class="dropdown-item" type="button">Another action</button></li>
-          <li><button class="dropdown-item" type="button">Something else here</button></li>
+          <li><button class="dropdown-item" type="button">Cerrar ahora</button></li>
         </ul>
       </div>
       <i class="fas fa-bell notification-icon"></i>

@@ -243,6 +243,10 @@ body {
     background-color: #f1f1f1;
 }
 
+.active__menu {
+    background-color: #f1f1f1;
+}
+
 .menu__action_bar {
     font-size: 12px;
     font-weight: 700;

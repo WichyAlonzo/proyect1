@@ -78,7 +78,7 @@ function actualizarPedido(data) {
         nuevoPedido = document.createElement('div');
         nuevoPedido.id = pedidoId;
         nuevoPedido.id = pedidoId;
-        nuevoPedido.className = 'shadow-sm p-3 mb-2 rounded terminado_card';
+        nuevoPedido.className = 'shadow-sm p-2 mb-2 rounded terminado_card';
         nuevoPedido.textContent = `ID: ${data.id}, Cliente: ${data.cliente}, Status: ${data.status}`;
         if (data.repa === '') {
             nuevoPedido.innerHTML = `
