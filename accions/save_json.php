@@ -18,8 +18,15 @@ if ($data) {
         $currentData = []; // Si el archivo no existe, inicializa un array vacío
     }
 
-    // Agregar el nuevo registro al array existente
-    $currentData[] = $data; // Agrega el nuevo registro al final del array
+    // Verificar si ya existe una entrada para el negocio específico
+    $businessKey = $data['business']; // Obtener la clave del negocio
+
+    if (!isset($currentData[$businessKey])) {
+        $currentData[$businessKey] = []; // Inicializar si no existe
+    }
+
+    // Agregar el nuevo registro al array correspondiente
+    $currentData[$businessKey][] = $data; // Agrega el nuevo registro al final del array
 
     // Guardar los datos actualizados en el archivo JSON
     if (file_put_contents($filePath, json_encode($currentData, JSON_PRETTY_PRINT))) {

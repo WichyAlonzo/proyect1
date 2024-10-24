@@ -82,6 +82,75 @@ function duplicarProducto(button) {
 }
 
 // Manejo del envío del formulario
+// document.getElementById('alitasForm').onsubmit = function(event) {
+//     event.preventDefault();
+
+//     const idRandom = document.getElementById('idRandom').value;
+//     const nombre = document.getElementById('nombre').value;
+//     const categoria = document.getElementById('categoria').value;
+//     const descripcion = document.getElementById('descripcion').value;
+//     const precio = parseFloat(document.getElementById('precio').value);
+
+//     const extras = Array.from(document.querySelectorAll('.extra-group')).map(extra => {
+//         const extrasInput = parseFloat(extra.querySelector('.idExtras')?.value || '');
+//         const extraNombre = extra.querySelector('.extraNombre')?.value || '';
+//         const extraDescripcion = extra.querySelector('.extraDescripcion')?.value || '';
+//         const extraCantidad = parseFloat(extra.querySelector('.extraCantidad') 	?.value || '');
+
+//         const productos = Array.from(extra.querySelectorAll('.product-input')).map(product => {
+//             return {
+//                 nombre: product.querySelector('.productoNombre')?.value || '',
+//                 precio: parseFloat(product.querySelector('.productoPrecio')?.value) || 0
+//             };
+//         });
+
+//         return {
+//             id: extrasInput,
+//             nombre: extraNombre,
+//             descripcion: extraDescripcion,
+//             cantidad: extraCantidad,
+//             productos: productos
+//         };
+//     });
+
+
+//     const jsonData = {
+//         id: idRandom,
+//         business: business,
+//         top: 0,
+//         personas: 2,
+//         nombre: nombre,
+//         categoria: categoria,
+//         descripcion: descripcion,
+//         imagen: compressedImageBase64, // Aquí deberías incluir la imagen comprimida
+//         precio: precio,
+//         grupos: extras
+//     };
+
+//     console.log(JSON.stringify(jsonData));
+//     fetch('accions/save_json.php', { // Cambia esto por la URL real de tu backend
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify(jsonData)
+//         })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Error al guardar el archivo JSON');
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log('Archivo guardado:', data);
+//             alert('Información guardada exitosamente.');
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             alert('Hubo un problema al guardar la información.');
+//         });
+
+// };
 document.getElementById('alitasForm').onsubmit = function(event) {
     event.preventDefault();
 
@@ -95,7 +164,7 @@ document.getElementById('alitasForm').onsubmit = function(event) {
         const extrasInput = parseFloat(extra.querySelector('.idExtras')?.value || '');
         const extraNombre = extra.querySelector('.extraNombre')?.value || '';
         const extraDescripcion = extra.querySelector('.extraDescripcion')?.value || '';
-        const extraCantidad = parseFloat(extra.querySelector('.extraCantidad') 	?.value || '');
+        const extraCantidad = parseFloat(extra.querySelector('.extraCantidad')?.value || '');
 
         const productos = Array.from(extra.querySelectorAll('.product-input')).map(product => {
             return {
@@ -113,11 +182,12 @@ document.getElementById('alitasForm').onsubmit = function(event) {
         };
     });
 
-
+    // Crear el objeto JSON para el nuevo producto
     const jsonData = {
         id: idRandom,
         business: business,
         top: 0,
+        active: true,
         personas: 2,
         nombre: nombre,
         categoria: categoria,
@@ -128,6 +198,8 @@ document.getElementById('alitasForm').onsubmit = function(event) {
     };
 
     console.log(JSON.stringify(jsonData));
+
+    // Enviar el objeto JSON al servidor
     fetch('accions/save_json.php', { // Cambia esto por la URL real de tu backend
             method: 'POST',
             headers: {
@@ -149,7 +221,6 @@ document.getElementById('alitasForm').onsubmit = function(event) {
             console.error('Error:', error);
             alert('Hubo un problema al guardar la información.');
         });
-
 };
 
 
