@@ -1,16 +1,8 @@
 <?php
+include('app/conn.php');
 // Encabezados necesarios para Server-Sent Events (SSE)
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
-
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mi_base_de_datos";
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
